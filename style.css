@@ -1,0 +1,149 @@
+body{
+margin:0;
+font-family:Arial;
+background:#0f172a;
+color:white;
+display:flex;
+}
+
+/* ======================================================SIDEBAR====================================================== */
+
+.sidebar{
+width:220px;
+height:100vh;
+background:#020617;
+padding:20px;
+}
+
+.logo{
+margin-bottom:30px;
+}
+
+.menu{
+list-style:none;
+padding:0;
+}
+
+.menu li{
+padding:12px;
+cursor:pointer;
+color:#cbd5e1;
+}
+
+.menu li:hover{
+background:#1e293b;
+}
+
+
+/* ========================================================MAIN CONTENT======================================================== */
+
+.mainContent{
+flex:1;
+padding:20px;
+}
+
+
+/* ============================================================HERO============================================================ */
+
+.hero{
+background:#1e293b;
+padding:40px;
+border-radius:10px;
+margin-bottom:40px;
+}
+
+.hero p{
+color:#94a3b8;
+}
+
+.btn{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+background:#6366f1;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+
+/* ==========================================================FEATURES========================================================== */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-bottom:40px;
+}
+
+.featureCard{
+background:#1e293b;
+padding:20px;
+border-radius:8px;
+}
+
+
+/* ==========================================================WORKFLOW========================================================== */
+
+.workflow{
+background:#1e293b;
+padding:25px;
+border-radius:10px;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+margin-top:15px;
+}
+
+.step{
+background:#0f172a;
+padding:15px;
+border-radius:6px;
+text-align:center;
+}
+
+
+/* ======================================================DASHBOARD CARDS====================================================== */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+margin-bottom:30px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
+
+/* ========================================================CHART LAYOUT======================================================== */
+
+.charts{
+display:grid;
+grid-template-columns:2fr 1fr; /* BIG + SMALL */
+gap:20px;
+}
+
+
+/* =========================================================BIG CHART========================================================= */
+
+.chartLarge{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
+
+/* ========================================================SMALL CHART======================================================== */
+
+.chartSmall{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}

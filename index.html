@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DataML Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+
+// For Login===============================================================================================================
+if(localStorage.getItem("loggedIn") !== "true"){
+    window.location.href = "login.html";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<!-- ========================================================SIDEBAR======================================================= -->
+
+<div class="sidebar">
+<button onclick="logout()">Logout</button>
+<h2 class="logo">Minus Zero</h2>
+
+<ul class="menu">
+
+<li onclick="showPage('home')">Home</li>
+<li onclick="showPage('dashboard')">Dashboard</li>
+
+<li>Raw Data</li>
+<li>Processed Data</li>
+<li>Machine Learning</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- ====================================================MAIN CONTENT==================================================== -->
+
+<div class="mainContent">
+
+
+<!-- ======================================================HOME PAGE====================================================== -->
+
+
+<div id="homePage">
+
+<div class="hero">
+
+<h1>Machine Learning Data Platform</h1>
+
+<p>
+This system collects responses from Google Forms,
+stores raw data in a MySQL database, processes the
+data using Machine Learning, and visualizes insights
+through interactive dashboards.
+</p>
+
+<button onclick="showPage('dashboard')" class="btn">
+Open Dashboard
+</button>
+
+</div>
+
+
+
+<!-- ========================================================FEATURES======================================================== -->
+
+<div class="features">
+
+<div class="featureCard">
+<h3>📥 Data Collection</h3>
+<p>Responses are automatically collected from Google Forms.</p>
+</div>
+
+<div class="featureCard">
+<h3>💾 Raw Database</h3>
+<p>Original data is stored safely in MySQL without modification.</p>
+</div>
+
+<div class="featureCard">
+<h3>🧠 Machine Learning</h3>
+<p>Data is cleaned and processed using machine learning models.</p>
+</div>
+
+<div class="featureCard">
+<h3>📊 Visualization</h3>
+<p>Charts and dashboards help analyze the data easily.</p>
+</div>
+
+</div>
+
+
+
+<!-- ========================================================WORKFLOW======================================================== -->
+
+<div class="workflow">
+
+<h2>System Workflow</h2>
+
+<div class="steps">
+
+<div class="step">1️⃣ Collect Google Form Data</div>
+<div class="step">2️⃣ Store Raw Data in MySQL</div>
+<div class="step">3️⃣ Process Data with ML</div>
+<div class="step">4️⃣ Store Processed Data</div>
+<div class="step">5️⃣ Visualize Results</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<!--========================================================DASHBOARD======================================================= -->
+
+
+<div id="dashboardPage" style="display:none;">
+
+
+
+<!-- ======KPI CARDS======= -->
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Responses</h3>
+<p>1200</p>
+</div>
+
+<div class="card">
+<h3>Processed Data</h3>
+<p>980</p>
+</div>
+
+<div class="card">
+<h3>ML Accuracy</h3>
+<p>92%</p>
+</div>
+
+<div class="card">
+<h3>Files Size</h3>
+<p>275 MB</p>
+</div>
+
+</div>
+
+
+
+<!-- ======================================CHART SECTION====================================== -->
+
+<div class="charts">
+
+<div class="chartLarge">
+
+<h3>Responses Over Time</h3>
+
+<canvas id="lineChart"></canvas>
+
+</div>
+
+
+<div class="chartSmall">
+
+<h3>Data Source (File Types)</h3>
+
+<canvas id="pieChart"></canvas>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
